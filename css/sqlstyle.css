@@ -1,0 +1,18 @@
+.button-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.table-btn {
+  font-size: 1.4rem;
+  padding: 1rem 2rem;
+  transition: 0.3s all;
+  border-radius: 5px;
+}
+
+.table-btn:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+  background-color: #fff;
+  border-radius: 10px;
+}

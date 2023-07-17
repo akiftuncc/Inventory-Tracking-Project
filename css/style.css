@@ -1,0 +1,131 @@
+.inventory-div {
+  position: relative;
+}
+
+.inv-btn {
+  background-color: #233eb6;
+  color: #e5eaf5;
+  font-size: 1.2rem;
+  border-radius: 1px;
+  top: -2.4rem;
+  border: none;
+  padding: 0.3rem 0.6rem;
+  position: absolute;
+  transition: 0.3s all;
+}
+
+.inv-btn:hover {
+  transform: scale(1.1);
+  background-color: #d9ddec;
+  color: #0d2863;
+  cursor: pointer;
+}
+
+/* Form styles */
+.bars-10-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr) 2fr;
+  gap: 0.5rem 1rem;
+}
+
+select,
+input {
+  font-size: 1.6rem;
+  padding: 0.6rem;
+}
+
+input.input {
+  width: 100%;
+}
+
+/* Section styles */
+.section-bottom {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.show-link {
+  background-color: #e5eaf5;
+  color: #233eb6;
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  transition: all 0.3s;
+}
+
+.show-link:hover {
+  background-color: #233eb6;
+  color: #e5eaf5;
+}
+
+.gonder {
+  align-items: center;
+  text-align: center;
+}
+
+#gonder {
+  border-radius: 0.5rem;
+  color: #050e36;
+  background-color: #b7c2d8;
+  text-align: center;
+  align-items: center;
+  padding: 1rem 2rem;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+  transition: 0.3s all;
+}
+#gonder:hover {
+  background-color: #c47b1c;
+  color: #e5eaf5;
+  cursor: pointer;
+}
+
+.table-section {
+  background-color: #fff;
+  font-size: 1.2rem;
+}
+
+.table-values-grid-container {
+  display: grid;
+  background-color: #fff;
+  grid-template-columns: 0.5fr 1fr 1fr 1fr 1.1fr 3fr 3fr 4fr 3fr 3fr 5fr;
+  gap: 0.2rem;
+  margin-top: 0.3rem;
+}
+
+.table-div {
+  background-color: rgb(216, 216, 216);
+  text-align: center;
+}
+
+@media (max-width: 1600px) {
+  .table-section {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 1350px) {
+  .table-section {
+    font-size: 0.8rem;
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 650px) {
+  .bars-10-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .btn {
+    display: block;
+    margin-top: 2rem;
+  }
+}
+
+.temporary-effect {
+  border: 0.3rem solid red;
+}

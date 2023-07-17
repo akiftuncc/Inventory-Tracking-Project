@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/general.css" />
+    <script type="text/javascript" src="js/JsBarcode.all.min.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="container nav-container">
+          <h1 class="nav-heading">
+            <a href="index.html" class="nav-link">Kontrol Programı</a>
+          </h1>
+          <h1 class="nav-heading">
+            <a class="nav-link" href="sql.html">Tablo</a>
+          </h1>
+        </div>
+      </nav>
+    </header>
+
+    <section class="main-section">
+      <div class="container">
+        <div class="bars-10">
+          <form
+            id="myForm"
+            class="user-form"
+            action="form_create.php"
+            method="POST"
+            enctype="multipart/form-data"
+          >
+            <div class="bars-10-grid">
+              <select name="site" id="site" class="bars-all inventory-bars">
+                <option value="A11">A11</option>
+                <option value="B12">B12</option>
+                <option value="C20">C20</option>
+                <option value="D21">D21</option>
+                <option value="E22">E22</option>
+                <option value="F41">F41</option>
+                <option value="G00">G00</option>
+                <option value="H10">H10</option>
+                <option value="I00">I00</option>
+                <option value="J10">J10</option>
+                <option value="K11">K11</option>
+                <option value="L10">L10</option>
+              </select>
+
+              <select name="grup" id="grup" class="bars-all inventory-bars">
+                <option value="AKG">AKG</option>
+                <option value="BNT">BNT</option>
+                <option value="CTB">CTB</option>
+                <option value="DBK">DBK</option>
+                <option value="ETM">ETM</option>
+                <option value="FMK">FMK</option>
+                <option value="GZC">GZC</option>
+                <option value="HCK">HCK</option>
+                <option value="SLV">SLV</option>
+                <option value="ULT">ULT</option>
+                <option value="XXT">XXT</option>
+                <option value="ZRJ">ZRJ</option>
+              </select>
+
+              <input
+                class="input bars-all inventory-bars"
+                placeholder="no"
+                type="text"
+                id="numara"
+                name="numara"
+                required
+              />
+
+              <select name="durum" id="durum" class="bars-all inventory-bars">
+                <option value="A">A</option>
+                <option value="P">P</option>
+              </select>
+
+              <div class="inventory-div">
+                <button class="inv-btn">env</button>
+
+                <input
+                  class="input bars-all"
+                  placeholder="envanter"
+                  type="text"
+                  id="envanter"
+                  name="envanter"
+                />
+              </div>
+
+              <input
+                class="input bars-all"
+                placeholder="ait"
+                type="text"
+                id="ait"
+                name="ait"
+                required
+              />
+
+              <input
+                class="input bars-all"
+                placeholder="seri no"
+                type="text"
+                id="seri-no"
+                name="seri-no"
+              />
+
+              <input
+                class="input bars-all"
+                placeholder="marka-model"
+                type="text"
+                id="marka-model"
+                name="marka-model"
+                required
+              />
+
+              <input
+                class="input bars-all"
+                placeholder="işletim-sistemi"
+                type="text"
+                id="isletim-sistemi"
+                name="isletim-sistemi"
+                required
+              />
+
+              <input
+                class="input bars-all"
+                placeholder="lisans"
+                type="text"
+                id="lisans"
+                name="lisans"
+                required
+              />
+            </div>
+
+            <div class="gonder">
+              <input id="gonder" type="submit" value="Gönder" />
+            </div>
+          </form>
+          <button class="barcode-btn">Barkod Göster</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section class="section-bottom">
+      <div class="container">
+        <a class="show-link" href="sql.html">Göster</a>
+      </div>
+    </section> -->
+
+    <section class="container table-section">
+      <div class="container container-table-div">
+        <div class="table-values-grid-container">
+          <div class="table-div"><h4 class="table-value">Id</h4></div>
+          <div class="table-div"><h4 class="table-value">Site</h4></div>
+          <div class="table-div"><h4 class="table-value">Tip</h4></div>
+          <div class="table-div"><h4 class="table-value">No</h4></div>
+          <div class="table-div"><h4 class="table-value">Durum</h4></div>
+          <div class="table-div"><h4 class="table-value">Envanter</h4></div>
+          <div class="table-div"><h4 class="table-value">Ait</h4></div>
+          <div class="table-div"><h4 class="table-value">Seri No</h4></div>
+          <div class="table-div"><h4 class="table-value">Marka-Model</h4></div>
+          <div class="table-div"><h4 class="table-value">İşletim Sis</h4></div>
+          <div class="table-div"><h4 class="table-value">Lisans</h4></div>
+        </div>
+        <div class="table-values-grid-container">
+          <!-- <svg class="barcode"></svg> -->
+          <div class="table-div"><p></p></div>
+          <div class="table-div"><p></p></div>
+          <div class="table-div"><p></p></div>
+          <div class="table-div"><p></p></div>
+          <div class="table-div"><p></p></div>
+          <div class="table-div"><p></p></div>
+          <div class="table-div"><p></p></div>
+          <div class="table-div"><p></p></div>
+          <div class="table-div"><p></p></div>
+          <div class="table-div"><p></p></div>
+          <div class="table-div"><p></p></div>
+        </div>
+      </div>
+    </section>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
