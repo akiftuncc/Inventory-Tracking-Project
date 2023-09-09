@@ -1,0 +1,463 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 1.6rem;
+  background-color: #1e212c;
+}
+
+a {
+  color: #e5eaf5;
+  text-decoration: none;
+}
+
+.nav-link {
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-self: center;
+  height: 150px;
+}
+
+.container {
+  max-width: 110rem;
+  margin: 0 auto;
+}
+
+.navbar {
+  background-color: #494d5f;
+  color: #e5eaf5;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+}
+
+.nav-heading {
+  margin-bottom: 0rem;
+  font-size: 4.4rem;
+}
+
+.inventory-div {
+  position: relative;
+}
+
+.inv-btn {
+  background-color: #233eb6;
+  color: #e5eaf5;
+  font-size: 1.2rem;
+  border-radius: 1px;
+  top: -2.4rem;
+  border: none;
+  padding: 0.3rem 0.6rem;
+  position: absolute;
+  transition: 0.3s all;
+}
+
+.inv-btn:hover {
+  transform: scale(1.1);
+  background-color: #d9ddec;
+  color: #0d2863;
+  cursor: pointer;
+}
+
+/* Form styles */
+.bars-10-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr) 2fr;
+  gap: 0.5rem 1rem;
+}
+
+select,
+input {
+  font-size: 1.6rem;
+  padding: 0.6rem;
+}
+
+input.input {
+  width: 100%;
+}
+
+/* Section styles */
+.section-bottom {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.show-link {
+  background-color: #e5eaf5;
+  color: #233eb6;
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  transition: all 0.3s;
+}
+
+.show-link:hover {
+  background-color: #233eb6;
+  color: #e5eaf5;
+}
+
+.gonder {
+  align-items: center;
+  text-align: center;
+}
+
+#gonder {
+  border-radius: 0.5rem;
+  color: #050e36;
+  background-color: #b7c2d8;
+  text-align: center;
+  align-items: center;
+  padding: 1rem 2rem;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+  transition: 0.3s all;
+}
+#gonder:hover {
+  background-color: #c47b1c;
+  color: #e5eaf5;
+  cursor: pointer;
+}
+
+.table-main-container {
+  border-bottom: 5px groove #0d2863;
+  display: grid;
+  background-color: #fff;
+  grid-template-columns: 0.5fr 1fr 1fr 1fr 1.1fr 2.5fr 3fr 5.5fr 3fr 3fr 5fr;
+  grid-template-rows: 30px 0px;
+  gap: 0.2rem;
+  margin-top: 0.3rem;
+}
+
+.table-section {
+  background-color: #fff;
+  font-size: 1.2rem;
+}
+
+.table-values-grid-container {
+  display: grid;
+  background-color: #fff;
+  grid-template-columns: 0.5fr 1fr 1fr 1fr 1.1fr 2.5fr 3fr 5.5fr 3fr 3fr 5fr;
+  grid-template-rows: 30px 0px; /* İki satırdaki yükseklikler: 50 piksel ve 100 piksel */
+  gap: 0.2rem;
+  margin-top: 0.3rem;
+}
+
+.table-values-grid-container:hover {
+  transition: all 2s;
+  cursor: pointer;
+  background-color: black;
+}
+
+.table-values-grid-container:hover .table-div {
+  cursor: pointer;
+  background-color: rgb(230, 192, 192);
+}
+
+.table-value {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.table-div p {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.table-div {
+  align-items: center;
+  transition: 0.5s all;
+  background-color: rgb(216, 216, 216);
+  text-align: center;
+}
+
+@media (min-width: 1500px) {
+  .table-values-grid-container {
+    grid-template-rows: 44px 0px; /* İki satırdaki yükseklikler: 50 piksel ve 100 piksel */
+  }
+}
+
+@media (min-width: 1500px) {
+  .table-values-grid-container {
+    grid-template-rows: 40px 0px; /* İki satırdaki yükseklikler: 50 piksel ve 100 piksel */
+  }
+}
+
+@media (max-width: 1600px) {
+  .table-section {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 1350px) {
+  .table-section {
+    font-size: 0.8rem;
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 650px) {
+  .bars-10-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .btn {
+    display: block;
+    margin-top: 2rem;
+  }
+}
+
+.temporary-effect {
+  border: 0.3rem solid red;
+}
+
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+.modals {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Background color and opacity */
+  backdrop-filter: blur(5px); /* Amount of blur */
+  z-index: 1; /* Ensure modal appears on top of other content */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modals-modify {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Background color and opacity */
+  backdrop-filter: blur(5px); /* Amount of blur */
+  z-index: 2; /* Ensure modal appears on top of other content */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.delete-modal {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.delete-modal-container {
+  position: relative;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.delete-answer-buttons {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.deleted-rows-btn {
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+  border: none;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+.clear-button {
+  bottom: 0;
+  right: 0;
+  position: absolute;
+}
+.deleted-clear {
+  color: white;
+  background-color: rgb(156, 28, 128);
+  margin-top: 1rem;
+  font-size: 1rem;
+  padding: 0.3rem 0.6rem;
+}
+.deleted-clear:hover {
+  color: #050e36;
+  background-color: rgb(240, 151, 220);
+  cursor: pointer;
+}
+
+.deleted-yes:hover {
+  cursor: pointer;
+  background-color: green;
+  color: #fff;
+  transition: 0.3s all;
+}
+
+.deleted-no:hover {
+  cursor: pointer;
+  background-color: red;
+  color: #fff;
+  transition: 0.3s all;
+}
+
+.btn-modal-div-print {
+  position: absolute;
+  right: 40px;
+  bottom: 30px;
+}
+
+.btn-modal-div-modify {
+  position: absolute;
+  left: 40px;
+  bottom: 30px;
+}
+
+.btn-modal-modify {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #c47b1c;
+  color: #fff;
+}
+
+.btn-modal-modify:hover {
+  cursor: pointer;
+  box-shadow: 0 0 20px #c47b1c;
+  background-color: #fff;
+  color: #c47b1c;
+  font-weight: bold;
+}
+
+.btn-modal-print {
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  background-color: #0d2863;
+  color: #fff;
+  border: none;
+}
+
+.btn-modal-print:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+  color: #0d2863;
+  background-color: #fff;
+  cursor: pointer;
+  transition: 0.3s all;
+  font-weight: bold;
+}
+
+.modal-container {
+  font-weight: bold;
+  position: relative;
+  width: 80%;
+  max-width: 600px;
+}
+
+.modal {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.btn-modal {
+  padding: 1.5rem 1.5rem;
+  font-size: 1.4rem;
+  border-radius: 50%;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+.btn-modal:hover {
+  box-shadow: 0 0 30px #0d2863;
+  cursor: pointer;
+}
+
+.text-modal-div p {
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.printed-all {
+  display: inline-block;
+  position: relative;
+}
+
+.btn-change-div {
+  margin-top: 2rem;
+}
+
+.btn-change {
+  padding: 0.8rem 1.6rem;
+  font-size: 1.3rem;
+  border-radius: 7px;
+  border: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+}
+
+.btn-change:hover {
+  cursor: pointer;
+  transition: 0.3s all;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+}
+
+.delete-selected-btn {
+  border: solid transparent 1px;
+  transition: 0.3s all;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+}
+
+.delete-selected-btn:hover {
+  color: red;
+  cursor: pointer;
+  border: solid red 1px;
+}
+
+.id-sirala {
+  border: solid transparent 1px;
+  transition: 0.3s all;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+}
+
+.id-sirala:hover {
+  color: blue;
+  cursor: pointer;
+  border: solid blue 1px;
+}
